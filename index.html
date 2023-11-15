@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora y Fecha Local</title>
+</head>
+<body>
+    <h1>Fecha y Hora Local</h1>
+    <p id="fecha-hora"></p>
+
+    <script>
+        // Obtenemos la fecha y hora local del usuario
+        var fechaHoraLocal = new Date();
+        
+        // Mostramos la fecha y hora en el elemento con id "fecha-hora"
+        document.getElementById("fecha-hora").innerHTML = "Fecha y hora local: " + fechaHoraLocal;
+    </script>
+</body>
+</html>
