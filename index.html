@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora y Fecha Local</title>
+    <title>Hora y Fecha en Tiempo Real</title>
 </head>
 <body>
-    <h1>Fecha y Hora Local</h1>
+    <h1>Fecha y Hora en Tiempo Real</h1>
     <p id="fecha-hora"></p>
 
     <script>
-        // Obtenemos la fecha y hora local del usuario
-        var fechaHoraLocal = new Date();
-        
-        // Mostramos la fecha y hora en el elemento con id "fecha-hora"
-        document.getElementById("fecha-hora").innerHTML = "Fecha y hora local: " + fechaHoraLocal;
+        // Función para obtener la fecha y hora local y actualizar el elemento HTML
+        function actualizarFechaHora() {
+            var fechaHoraLocal = new Date();
+            document.getElementById("fecha-hora").innerHTML = "Fecha y hora local: " + fechaHoraLocal;
+        }
+
+        // Actualizamos la hora cada segundo (1000 milisegundos)
+        setInterval(actualizarFechaHora, 1000);
+
+        // Llamamos a la función por primera vez para mostrar la hora inicial
+        actualizarFechaHora();
     </script>
 </body>
 </html>
