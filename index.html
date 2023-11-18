@@ -16,6 +16,7 @@
             font-family: Arial, sans-serif;
             overflow: hidden; /* Evita el desbordamiento de las burbujas fuera del contenedor */
             position: relative; /* Permite posicionar las burbujas de manera absoluta */
+            transition: background 1s ease; /* Transición de 1 segundo con efecto ease (suavidad) */
         }
 
         .bubbles {
@@ -70,10 +71,10 @@
         <!-- Puedes agregar más burbujas según tus preferencias -->
     </div>
     <script>
-        // Cambia el color de fondo después de cierto tiempo
+        // Cambia el color de fondo después de 1 segundo
         setTimeout(function () {
             document.body.style.background = "linear-gradient(to right, #3498db, #2980b9)";
-        }, 3000);
+        }, 1000);
     </script>
 </body>
 </html>
