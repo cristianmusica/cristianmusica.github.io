@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora y Fecha en Tiempo Real</title>
+    <title>Cambio Suave de Color</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            transition: background 1s ease; /* Transición de 1 segundo con efecto ease (suavidad) */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <h1>Fecha y Hora en Tiempo Real</h1>
-    <p id="fecha-hora"></p>
-
     <script>
-        // Función para obtener la fecha y hora local y actualizar el elemento HTML
-        function actualizarFechaHora() {
-            var fechaHoraLocal = new Date();
-            document.getElementById("fecha-hora").innerHTML = "Fecha y hora local: " + fechaHoraLocal;
-        }
-
-        // Actualizamos la hora cada segundo (1000 milisegundos)
-        setInterval(actualizarFechaHora, 1000);
-
-        // Llamamos a la función por primera vez para mostrar la hora inicial
-        actualizarFechaHora();
+        // Puedes usar JavaScript para cambiar el color de fondo después de cierto tiempo
+        setTimeout(function () {
+            document.body.style.background = "linear-gradient(to right, #3498db, #2980b9)";
+        }, 3000); // Cambiará el color después de 3 segundos
     </script>
 </body>
 </html>
